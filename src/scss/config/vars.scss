@@ -1,0 +1,52 @@
+$maxWidth: 1920; // максимальная ширина страницы
+$minWidth: 320; // минимальная ширина телефона
+$maxWidthContainer: 1540; // ширина контейнера с учетом padding слева и справа
+$containerWidth: 1520; // ширина контейнера из макета
+
+$mainOffset: 15; // отступы безопасности для контейнера
+$mainFont: 'Inter'; // !указать здесь основное семейство шрифта
+$mainWeight: 400; // !указать здесь основное начертание шрифта
+
+$headerHeight: 100px;
+$footerHeight: 100;
+
+$mainRadius: rem(10);
+
+$primaryColor: #194EDC;
+
+$primaryBgColor: #ffffff;
+$secondaryBgColor: #F4F7FF;
+
+$primaryBorderColor:#D9D9D9;
+
+$primaryTextColor: #343434;
+$lightTextColor: #f2f2f2f2;
+$secondaryTextColor: #080F18;
+
+$shadow: 0px 4px 30px 0px rgba(54, 41, 183, 0.07);
+
+$defaultTransition: .3s ease-in-out;
+
+$defaultBorderRadius: 15px;
+
+$fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
+$fontSize: 16; // Размер шрифта по умолчанию
+$fontWeight: $mainWeight; // Жирность шрифта по умолчанию
+
+$standartTrans: all 280ms ease-in-out 0ms;
+
+$btnBoxShadow: 0px 2px 3px rgba(#000, 10%), 0px 8px 3px rgba(#000, 10%);
+
+$lightBoxShadow: 0 0 2px 0 rgba(#000, 10%), 0 0 4px 0 rgba(#000, 10%),
+  0 0 8px 0 rgba(#000, 10%);
+
+$hoverBoxShadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%),
+  0 0 15px 0 rgba(#000, 10%);
+
+body {
+  --headerHeight: 100px;
+
+  @media (max-width: 767px) {
+    --headerHeight: 80px;
+  }
+}

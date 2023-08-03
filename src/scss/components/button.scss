@@ -1,0 +1,47 @@
+.button {
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: $defaultBorderRadius;
+  transition: $defaultTransition;
+
+  &--lg {
+    padding: 12px 40px;
+    font-size: 20px;
+    font-weight: 400;
+
+    @media (max-width: 425px) {
+      padding: 8px 30px;
+    }
+  }
+
+  &--bordered {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+
+    &:hover { 
+      background-color: #ffffff;
+      color: $primaryTextColor;
+    }
+  }
+
+  &--primary {
+    background-color: $primaryColor;
+    color: $lightTextColor;
+    border: 2px solid transparent;
+
+    &:hover,
+    &:focus {
+      border-color: $primaryColor;
+      background-color: $primaryBgColor;
+      color: $primaryColor;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      background-color: $primaryColor;
+      color: $lightTextColor;
+      border: 2px solid transparent;
+    }
+  }
+}
