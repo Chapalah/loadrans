@@ -1,7 +1,0 @@
-.vscode
-.idea
-.temporary_cache
-
-node_modules
-package-lock.json
-gulp/version.json
