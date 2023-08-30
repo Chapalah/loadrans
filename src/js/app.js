@@ -190,15 +190,6 @@ tabs.forEach((item) => {
 compareHeight();
 onLoadSettings();
 
-document
-  .querySelector('.js-show-contacts')
-  .addEventListener('click', (event) => {
-    document
-      .querySelectorAll('.contacts__item--hidden')
-      .forEach((item) => item.classList.remove('contacts__item--hidden'));
-    event.target.classList.add('button--hidden');
-  });
-
 const form = document.querySelector('#quote-form');
 
 const telSelector = form.querySelector('#phone');

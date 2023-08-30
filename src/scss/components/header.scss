@@ -33,7 +33,7 @@
 
       &__item {
         background-color: transparent;
-        transition: background-color $defaultTransition, color .1s ease-in-out;
+        transition: .35s linear;
         cursor: pointer;
         border-radius: $defaultBorderRadius;
 
