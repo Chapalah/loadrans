@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.min.css?_v=20230731225300">
+  <link rel="stylesheet" href="css/style.min.css?_v=20230831013538">
   <title>Loadrans LLC Long Distance Moving Company</title>
 </head>
 
@@ -36,9 +36,6 @@
           <li class="menu__item"><a aria-label="about" href="#about" class="menu__link">About</a></li>
           <li class="menu__item">
             <a aria-label="calculator" href="#calculator" class="menu__link">Calculator</a>
-          </li>
-          <li class="menu__item">
-            <a aria-label="license" href="#license" class="menu__link">Licenses</a>
           </li>
           <li class="menu__item">
             <a aria-label="contacts" href="#contacts" class="menu__link">Contacts</a>
@@ -2260,13 +2257,13 @@
                 <div class="quote-form__row">
                   <div class="quote-form__item">
                     <div class="quote-form__field">
-                      <label for="from">Moving From Caption</label>
+                      <label for="from_elevator_yes">Moving From Caption</label>
                       <input required id="from" name="Moving From Caption" type="text" placeholder="Enter city or ZIP code">
                     </div>
                   </div>
                   <div class="quote-form__item">
                     <div class="quote-form__field">
-                      <label for="from_elevator">Elevator </label>
+                      <label for="from_elevator_yes">Elevator </label>
                       <div class="quote-form__actions js-elevator">
                         <div class="quote-form__action">
                           <input name="From Elevator" value="Yes" checked="checked" type="radio" id="from_elevator_yes" data-type="from_elevator">
@@ -2284,11 +2281,21 @@
                       <label for="from_floor">Floor</label>
                       <select name="From Floor" id="from_floor">
                         <option value="" selected="selected" disabled="disabled">Select</option>
-                        <option name="from_floor" value="1st floor">1st floor</option>
-                        <option name="from_floor" value="2st floor">2st floor</option>
-                        <option name="from_floor" value="3st floor">3st floor</option>
-                        <option name="from_floor" value="4st floor">4st floor</option>
-                        <option name="from_floor" value="5st+ floor">5st+ floor</option>
+                        <option name="from_floor" value="1st floor">
+                          1st floor
+                        </option>
+                        <option name="from_floor" value="2st floor">
+                          2st floor
+                        </option>
+                        <option name="from_floor" value="3st floor">
+                          3st floor
+                        </option>
+                        <option name="from_floor" value="4st floor">
+                          4st floor
+                        </option>
+                        <option name="from_floor" value="5st+ floor">
+                          5st+ floor
+                        </option>
                       </select>
                     </div>
                   </div>
@@ -2304,7 +2311,7 @@
 
                   <div class="quote-form__item">
                     <div class="quote-form__field">
-                      <label for="from_elevator">Elevator </label>
+                      <label for="to_elevator_yes">Elevator </label>
                       <div class="quote-form__actions js-elevator">
                         <div class="quote-form__action">
                           <input name="To Elevator" value="Yes" checked="checked" type="radio" id="to_elevator_yes" data-type="to_elevator">
@@ -2322,11 +2329,21 @@
                       <label for="to_floor">Floor</label>
                       <select name="To Floor" id="to_floor">
                         <option value="" selected="selected" disabled="disabled">Select</option>
-                        <option name="to_floor" value="1st floor">1st floor</option>
-                        <option name="to_floor" value="2st floor">2st floor</option>
-                        <option name="to_floor" value="3st floor">3st floor</option>
-                        <option name="to_floor" value="4st floor">4st floor</option>
-                        <option name="to_floor" value="5st+ floor">5st+ floor</option>
+                        <option name="to_floor" value="1st floor">
+                          1st floor
+                        </option>
+                        <option name="to_floor" value="2st floor">
+                          2st floor
+                        </option>
+                        <option name="to_floor" value="3st floor">
+                          3st floor
+                        </option>
+                        <option name="to_floor" value="4st floor">
+                          4st floor
+                        </option>
+                        <option name="to_floor" value="5st+ floor">
+                          5st+ floor
+                        </option>
                       </select>
                     </div>
                   </div>
@@ -2342,7 +2359,7 @@
                   <div class="quote-form__item">
                     <div class="quote-form__field">
                       <label for="phone">Phone Number Caption</label>
-                      <input required name="Phone Number" id="phone" type="tel" placeholder="Enter your phone number" pattern="([0-9]{3})-[0-9]{3}-[0-9]{4}">
+                      <input required name="Phone Number" id="phone" autocomplete="off" type="tel" placeholder="Enter your phone number" pattern="([0-9]{3})-[0-9]{3}-[0-9]{4}">
                     </div>
                   </div>
                 </div>
@@ -2351,8 +2368,8 @@
                   <div class="quote-form__item">
                     <div class="quote-form__field">
                       <label for="email">Email</label>
-                      <input required name="Email" id="email" type="text" placeholder="Enter your email" title="Invalid email address" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
-                      </div>
+                      <input required name="Email" id="email" type="text" placeholder="Enter your email" title="Invalid email address" autocomplete="on" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                    </div>
                   </div>
 
                   <div class="quote-form__item">
@@ -2365,14 +2382,14 @@
 
                 <div class="quote-form__row">
                   <div class="quote-form__field">
-                    <label for="commnet">Additional Information <mark>(optional)</mark></label>
-                    <textarea name="Additional Information" placeholder="Specify here any additional stops, deadlines, freight entrances, building restrictions, long walks, additional steps or relevant information pertaining to this move."></textarea>
+                    <label for="Comment">Additional Information <mark>(optional)</mark></label>
+                    <textarea id="Comment" name="Additional Information" placeholder="Specify here any additional stops, deadlines, freight entrances, building restrictions, long walks, additional steps or relevant information pertaining to this move."></textarea>
                   </div>
                 </div>
 
                 <div class="quote-form__row">
                   <div class="quote-form__field">
-                    <label for="moving_type">Moving Type</label>
+                    <label for="long_distanse">Moving Type</label>
                     <div class="quote-form__actions">
                       <div class="quote-form__action">
                         <input name="Moving Type" checked="checked" type="radio" id="long_distanse" value="Long Distance Moving">
@@ -2386,7 +2403,7 @@
                     </div>
                   </div>
                   <div class="quote-form__field">
-                    <label for="packing_type">Packing Type</label>
+                    <label for="full_packing">Packing Type</label>
                     <div class="quote-form__actions">
                       <div class="quote-form__action">
                         <input name="Packing Type" checked="checked" type="radio" id="full_packing" value="Full Packing">
@@ -2403,7 +2420,7 @@
 
                 <div class="quote-form__row">
                   <div class="quote-form__field">
-                    <label for="quote_type">Residential or Business</label>
+                    <label for="for_home">Residential or Business</label>
                     <div class="quote-form__actions">
                       <div class="quote-form__action">
                         <input name="Residential or Business" checked="checked" type="radio" id="for_home" value="For Home">
@@ -2418,7 +2435,7 @@
                   </div>
 
                   <div class="quote-form__field">
-                    <label for="help_type">What can we help you with?</label>
+                    <label for="moving">What can we help you with?</label>
                     <div class="quote-form__actions">
                       <div class="quote-form__action">
                         <input name="What can we help you with?" type="radio" id="moving" checked="checked" value="Moving">
@@ -2524,42 +2541,6 @@
         </div>
       </section>
 
-      <section class="section" id="license">
-        <div class="section__container">
-          <div class="licensed">
-            <div class="licensed__title">
-              <h2>We Are <mark>Licensed</mark> And <mark>Insured</mark></h2>
-            </div>
-            <div class="licensed__wrapper">
-              <div class="licensed__info">
-                <h2>We Are <mark>Licensed</mark> And <mark>Insured</mark></h2>
-                <p>
-                  Loadrans LLC is licensed and insured to operate in the State
-                  of California and within the United States of America. We
-                  value each of our employee, and that’s why our guys are
-                  covered by workers compensation insurance.
-                </p>
-
-                <ul class="licensed__items">
-                  <li class="licensed__item">USDOT: 2774464</li>
-                  <li class="licensed__item">CAL-T: 0191955</li>
-                  <li class="licensed__item">MC: 1104857</li>
-                  <li class="licensed__item">Cargo Policy: CCP819114</li>
-                  <li class="licensed__item">PL and PD Policy: CA01079369</li>
-                  <li class="licensed__item">
-                    Workers Compensation Coverage: 9261539
-                  </li>
-                </ul>
-              </div>
-
-              <div class="licensed__image">
-                <picture><source srcset="./images/licensed.webp" type="image/webp"><img src="./images/licensed.png" alt=""></picture>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="section" id="contacts">
         <div class="section__container">
           <div class="section__title">
@@ -2569,199 +2550,53 @@
           <div class="contacts">
             <div class="contacts__items">
               <div class="contacts__item">
-                <h3>Los Angeles</h3>
+                <h3>CALIFORNIA</h3>
 
-                <ul>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25" fill="none">
-                        <path d="M10 0C4.47143 0 0 3.9125 0 8.75C0 15.3125 10 25 10 25C10 25 20 15.3125 20 8.75C20 3.9125 15.5286 0 10 0ZM10 11.875C8.02857 11.875 6.42857 10.475 6.42857 8.75C6.42857 7.025 8.02857 5.625 10 5.625C11.9714 5.625 13.5714 7.025 13.5714 8.75C13.5714 10.475 11.9714 11.875 10 11.875Z" fill="#194EDC"/></svg></i>
-                    <span>18340 Ventura Blvd, #212, Tarzana, CA 91356</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
-                        <path d="M6 9C7.52778 12.5 9.88389 14.3083 13.5 16L15.8572 14.21C16.2022 13.895 16.7133 13.79 17.1606 13.93C18.5917 14.3617 20.1378 14.595 21.7222 14.595C22.425 14.595 23 15.12 23 15.7617V19.8333C23 20.475 22.425 21 21.7222 21C9.72389 21 0 12.1217 0 1.16667C0 0.525 0.575 0 1.27778 0H5.75C6.45278 0 7.02778 0.525 7.02778 1.16667C7.02778 2.625 7.28333 4.025 7.75611 5.33167C7.89667 5.74 7.79444 6.195 7.43667 6.52167L6 9Z" fill="#194EDC"/></svg></i>
-                    <span>(111) 111-1111</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                        <path d="M18 0.5H2C0.9 0.5 0.0100021 1.5125 0.0100021 2.75L0 16.25C0 17.4875 0.9 18.5 2 18.5H18C19.1 18.5 20 17.4875 20 16.25V2.75C20 1.5125 19.1 0.5 18 0.5ZM18 5L10 10.625L2 5V2.75L10 8.375L18 2.75V5Z" fill="#194EDC"/></svg></i>
-                    <span>loadrans@mail.com</span>
-                  </li>
-                </ul>
+                <p>1601 Perrino Pl Suite D, Los Angeles, CA 90023</p>
+                <p>1946 Sabre St, Hayward, CA 94545</p>
+
+                <p>(800) 989 - 2620</p>
+
+                <p>loadrans@gmail.com</p>
+
+                <p>
+                  <b>Mon-Fri:</b> 8:00 AM – 6:00 PM<br>
+                  <b>Sat-Sun:</b> Closed<br>
+                </p>
               </div>
               <div class="contacts__item">
-                <h3>Los Angeles</h3>
+                <h3>WASHINGTON</h3>
 
-                <ul>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25" fill="none">
-                        <path d="M10 0C4.47143 0 0 3.9125 0 8.75C0 15.3125 10 25 10 25C10 25 20 15.3125 20 8.75C20 3.9125 15.5286 0 10 0ZM10 11.875C8.02857 11.875 6.42857 10.475 6.42857 8.75C6.42857 7.025 8.02857 5.625 10 5.625C11.9714 5.625 13.5714 7.025 13.5714 8.75C13.5714 10.475 11.9714 11.875 10 11.875Z" fill="#194EDC"/></svg></i>
-                    <span>18340 Ventura Blvd, #212, Tarzana, CA 91356</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
-                        <path d="M6 9C7.52778 12.5 9.88389 14.3083 13.5 16L15.8572 14.21C16.2022 13.895 16.7133 13.79 17.1606 13.93C18.5917 14.3617 20.1378 14.595 21.7222 14.595C22.425 14.595 23 15.12 23 15.7617V19.8333C23 20.475 22.425 21 21.7222 21C9.72389 21 0 12.1217 0 1.16667C0 0.525 0.575 0 1.27778 0H5.75C6.45278 0 7.02778 0.525 7.02778 1.16667C7.02778 2.625 7.28333 4.025 7.75611 5.33167C7.89667 5.74 7.79444 6.195 7.43667 6.52167L6 9Z" fill="#194EDC"/></svg></i>
-                    <span>(111) 111-1111</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                        <path d="M18 0.5H2C0.9 0.5 0.0100021 1.5125 0.0100021 2.75L0 16.25C0 17.4875 0.9 18.5 2 18.5H18C19.1 18.5 20 17.4875 20 16.25V2.75C20 1.5125 19.1 0.5 18 0.5ZM18 5L10 10.625L2 5V2.75L10 8.375L18 2.75V5Z" fill="#194EDC"/></svg></i>
-                    <span>loadrans@mail.com</span>
-                  </li>
-                </ul>
+                <p>20002 85th Ave S, Kent, WA 98032</p>
+
+                <p>(800) 989 - 2620</p>
+
+                <p>loadrans@gmail.com</p>
+
+                <p>
+                  <b>Mon-Fri:</b> 8:00 AM – 6:00 PM<br>
+                  <b>Sat-Sun:</b> Closed<br>
+                </p>
               </div>
               <div class="contacts__item">
-                <h3>Los Angeles</h3>
+                <h3>OREGON</h3>
 
-                <ul>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25" fill="none">
-                        <path d="M10 0C4.47143 0 0 3.9125 0 8.75C0 15.3125 10 25 10 25C10 25 20 15.3125 20 8.75C20 3.9125 15.5286 0 10 0ZM10 11.875C8.02857 11.875 6.42857 10.475 6.42857 8.75C6.42857 7.025 8.02857 5.625 10 5.625C11.9714 5.625 13.5714 7.025 13.5714 8.75C13.5714 10.475 11.9714 11.875 10 11.875Z" fill="#194EDC"/></svg></i>
-                    <span>18340 Ventura Blvd, #212, Tarzana, CA 91356</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
-                        <path d="M6 9C7.52778 12.5 9.88389 14.3083 13.5 16L15.8572 14.21C16.2022 13.895 16.7133 13.79 17.1606 13.93C18.5917 14.3617 20.1378 14.595 21.7222 14.595C22.425 14.595 23 15.12 23 15.7617V19.8333C23 20.475 22.425 21 21.7222 21C9.72389 21 0 12.1217 0 1.16667C0 0.525 0.575 0 1.27778 0H5.75C6.45278 0 7.02778 0.525 7.02778 1.16667C7.02778 2.625 7.28333 4.025 7.75611 5.33167C7.89667 5.74 7.79444 6.195 7.43667 6.52167L6 9Z" fill="#194EDC"/></svg></i>
-                    <span>(111) 111-1111</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                        <path d="M18 0.5H2C0.9 0.5 0.0100021 1.5125 0.0100021 2.75L0 16.25C0 17.4875 0.9 18.5 2 18.5H18C19.1 18.5 20 17.4875 20 16.25V2.75C20 1.5125 19.1 0.5 18 0.5ZM18 5L10 10.625L2 5V2.75L10 8.375L18 2.75V5Z" fill="#194EDC"/></svg></i>
-                    <span>loadrans@mail.com</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="contacts__item">
-                <h3>Los Angeles</h3>
+                <p>13270 SE Pheasant Ct, Milwaukie, OR 97222</p>
 
-                <ul>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25" fill="none">
-                        <path d="M10 0C4.47143 0 0 3.9125 0 8.75C0 15.3125 10 25 10 25C10 25 20 15.3125 20 8.75C20 3.9125 15.5286 0 10 0ZM10 11.875C8.02857 11.875 6.42857 10.475 6.42857 8.75C6.42857 7.025 8.02857 5.625 10 5.625C11.9714 5.625 13.5714 7.025 13.5714 8.75C13.5714 10.475 11.9714 11.875 10 11.875Z" fill="#194EDC"/></svg></i>
-                    <span>18340 Ventura Blvd, #212, Tarzana, CA 91356</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
-                        <path d="M6 9C7.52778 12.5 9.88389 14.3083 13.5 16L15.8572 14.21C16.2022 13.895 16.7133 13.79 17.1606 13.93C18.5917 14.3617 20.1378 14.595 21.7222 14.595C22.425 14.595 23 15.12 23 15.7617V19.8333C23 20.475 22.425 21 21.7222 21C9.72389 21 0 12.1217 0 1.16667C0 0.525 0.575 0 1.27778 0H5.75C6.45278 0 7.02778 0.525 7.02778 1.16667C7.02778 2.625 7.28333 4.025 7.75611 5.33167C7.89667 5.74 7.79444 6.195 7.43667 6.52167L6 9Z" fill="#194EDC"/></svg></i>
-                    <span>(111) 111-1111</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                        <path d="M18 0.5H2C0.9 0.5 0.0100021 1.5125 0.0100021 2.75L0 16.25C0 17.4875 0.9 18.5 2 18.5H18C19.1 18.5 20 17.4875 20 16.25V2.75C20 1.5125 19.1 0.5 18 0.5ZM18 5L10 10.625L2 5V2.75L10 8.375L18 2.75V5Z" fill="#194EDC"/></svg></i>
-                    <span>loadrans@mail.com</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="contacts__item contacts__item--hidden">
-                <h3>Los Angeles</h3>
+                <p>(800) 989 - 2620</p>
 
-                <ul>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25" fill="none">
-                        <path d="M10 0C4.47143 0 0 3.9125 0 8.75C0 15.3125 10 25 10 25C10 25 20 15.3125 20 8.75C20 3.9125 15.5286 0 10 0ZM10 11.875C8.02857 11.875 6.42857 10.475 6.42857 8.75C6.42857 7.025 8.02857 5.625 10 5.625C11.9714 5.625 13.5714 7.025 13.5714 8.75C13.5714 10.475 11.9714 11.875 10 11.875Z" fill="#194EDC"/></svg></i>
-                    <span>18340 Ventura Blvd, #212, Tarzana, CA 91356</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
-                        <path d="M6 9C7.52778 12.5 9.88389 14.3083 13.5 16L15.8572 14.21C16.2022 13.895 16.7133 13.79 17.1606 13.93C18.5917 14.3617 20.1378 14.595 21.7222 14.595C22.425 14.595 23 15.12 23 15.7617V19.8333C23 20.475 22.425 21 21.7222 21C9.72389 21 0 12.1217 0 1.16667C0 0.525 0.575 0 1.27778 0H5.75C6.45278 0 7.02778 0.525 7.02778 1.16667C7.02778 2.625 7.28333 4.025 7.75611 5.33167C7.89667 5.74 7.79444 6.195 7.43667 6.52167L6 9Z" fill="#194EDC"/></svg></i>
-                    <span>(111) 111-1111</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                        <path d="M18 0.5H2C0.9 0.5 0.0100021 1.5125 0.0100021 2.75L0 16.25C0 17.4875 0.9 18.5 2 18.5H18C19.1 18.5 20 17.4875 20 16.25V2.75C20 1.5125 19.1 0.5 18 0.5ZM18 5L10 10.625L2 5V2.75L10 8.375L18 2.75V5Z" fill="#194EDC"/></svg></i>
-                    <span>loadrans@mail.com</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="contacts__item contacts__item--hidden">
-                <h3>Los Angeles</h3>
+                <p>loadrans@gmail.com</p>
 
-                <ul>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25" fill="none">
-                        <path d="M10 0C4.47143 0 0 3.9125 0 8.75C0 15.3125 10 25 10 25C10 25 20 15.3125 20 8.75C20 3.9125 15.5286 0 10 0ZM10 11.875C8.02857 11.875 6.42857 10.475 6.42857 8.75C6.42857 7.025 8.02857 5.625 10 5.625C11.9714 5.625 13.5714 7.025 13.5714 8.75C13.5714 10.475 11.9714 11.875 10 11.875Z" fill="#194EDC"/></svg></i>
-                    <span>18340 Ventura Blvd, #212, Tarzana, CA 91356</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
-                        <path d="M6 9C7.52778 12.5 9.88389 14.3083 13.5 16L15.8572 14.21C16.2022 13.895 16.7133 13.79 17.1606 13.93C18.5917 14.3617 20.1378 14.595 21.7222 14.595C22.425 14.595 23 15.12 23 15.7617V19.8333C23 20.475 22.425 21 21.7222 21C9.72389 21 0 12.1217 0 1.16667C0 0.525 0.575 0 1.27778 0H5.75C6.45278 0 7.02778 0.525 7.02778 1.16667C7.02778 2.625 7.28333 4.025 7.75611 5.33167C7.89667 5.74 7.79444 6.195 7.43667 6.52167L6 9Z" fill="#194EDC"/></svg></i>
-                    <span>(111) 111-1111</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                        <path d="M18 0.5H2C0.9 0.5 0.0100021 1.5125 0.0100021 2.75L0 16.25C0 17.4875 0.9 18.5 2 18.5H18C19.1 18.5 20 17.4875 20 16.25V2.75C20 1.5125 19.1 0.5 18 0.5ZM18 5L10 10.625L2 5V2.75L10 8.375L18 2.75V5Z" fill="#194EDC"/></svg></i>
-                    <span>loadrans@mail.com</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="contacts__item contacts__item--hidden">
-                <h3>Los Angeles</h3>
-
-                <ul>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25" fill="none">
-                        <path d="M10 0C4.47143 0 0 3.9125 0 8.75C0 15.3125 10 25 10 25C10 25 20 15.3125 20 8.75C20 3.9125 15.5286 0 10 0ZM10 11.875C8.02857 11.875 6.42857 10.475 6.42857 8.75C6.42857 7.025 8.02857 5.625 10 5.625C11.9714 5.625 13.5714 7.025 13.5714 8.75C13.5714 10.475 11.9714 11.875 10 11.875Z" fill="#194EDC"/></svg></i>
-                    <span>18340 Ventura Blvd, #212, Tarzana, CA 91356</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
-                        <path d="M6 9C7.52778 12.5 9.88389 14.3083 13.5 16L15.8572 14.21C16.2022 13.895 16.7133 13.79 17.1606 13.93C18.5917 14.3617 20.1378 14.595 21.7222 14.595C22.425 14.595 23 15.12 23 15.7617V19.8333C23 20.475 22.425 21 21.7222 21C9.72389 21 0 12.1217 0 1.16667C0 0.525 0.575 0 1.27778 0H5.75C6.45278 0 7.02778 0.525 7.02778 1.16667C7.02778 2.625 7.28333 4.025 7.75611 5.33167C7.89667 5.74 7.79444 6.195 7.43667 6.52167L6 9Z" fill="#194EDC"/></svg></i>
-                    <span>(111) 111-1111</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                        <path d="M18 0.5H2C0.9 0.5 0.0100021 1.5125 0.0100021 2.75L0 16.25C0 17.4875 0.9 18.5 2 18.5H18C19.1 18.5 20 17.4875 20 16.25V2.75C20 1.5125 19.1 0.5 18 0.5ZM18 5L10 10.625L2 5V2.75L10 8.375L18 2.75V5Z" fill="#194EDC"/></svg></i>
-                    <span>loadrans@mail.com</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="contacts__item contacts__item--hidden">
-                <h3>Los Angeles</h3>
-
-                <ul>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25" fill="none">
-                        <path d="M10 0C4.47143 0 0 3.9125 0 8.75C0 15.3125 10 25 10 25C10 25 20 15.3125 20 8.75C20 3.9125 15.5286 0 10 0ZM10 11.875C8.02857 11.875 6.42857 10.475 6.42857 8.75C6.42857 7.025 8.02857 5.625 10 5.625C11.9714 5.625 13.5714 7.025 13.5714 8.75C13.5714 10.475 11.9714 11.875 10 11.875Z" fill="#194EDC"/></svg></i>
-                    <span>18340 Ventura Blvd, #212, Tarzana, CA 91356</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
-                        <path d="M6 9C7.52778 12.5 9.88389 14.3083 13.5 16L15.8572 14.21C16.2022 13.895 16.7133 13.79 17.1606 13.93C18.5917 14.3617 20.1378 14.595 21.7222 14.595C22.425 14.595 23 15.12 23 15.7617V19.8333C23 20.475 22.425 21 21.7222 21C9.72389 21 0 12.1217 0 1.16667C0 0.525 0.575 0 1.27778 0H5.75C6.45278 0 7.02778 0.525 7.02778 1.16667C7.02778 2.625 7.28333 4.025 7.75611 5.33167C7.89667 5.74 7.79444 6.195 7.43667 6.52167L6 9Z" fill="#194EDC"/></svg></i>
-                    <span>(111) 111-1111</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                        <path d="M18 0.5H2C0.9 0.5 0.0100021 1.5125 0.0100021 2.75L0 16.25C0 17.4875 0.9 18.5 2 18.5H18C19.1 18.5 20 17.4875 20 16.25V2.75C20 1.5125 19.1 0.5 18 0.5ZM18 5L10 10.625L2 5V2.75L10 8.375L18 2.75V5Z" fill="#194EDC"/></svg></i>
-                    <span>loadrans@mail.com</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="contacts__item contacts__item--hidden">
-                <h3>Los Angeles</h3>
-
-                <ul>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" viewBox="0 0 20 25" fill="none">
-                        <path d="M10 0C4.47143 0 0 3.9125 0 8.75C0 15.3125 10 25 10 25C10 25 20 15.3125 20 8.75C20 3.9125 15.5286 0 10 0ZM10 11.875C8.02857 11.875 6.42857 10.475 6.42857 8.75C6.42857 7.025 8.02857 5.625 10 5.625C11.9714 5.625 13.5714 7.025 13.5714 8.75C13.5714 10.475 11.9714 11.875 10 11.875Z" fill="#194EDC"/></svg></i>
-                    <span>18340 Ventura Blvd, #212, Tarzana, CA 91356</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21" fill="none">
-                        <path d="M6 9C7.52778 12.5 9.88389 14.3083 13.5 16L15.8572 14.21C16.2022 13.895 16.7133 13.79 17.1606 13.93C18.5917 14.3617 20.1378 14.595 21.7222 14.595C22.425 14.595 23 15.12 23 15.7617V19.8333C23 20.475 22.425 21 21.7222 21C9.72389 21 0 12.1217 0 1.16667C0 0.525 0.575 0 1.27778 0H5.75C6.45278 0 7.02778 0.525 7.02778 1.16667C7.02778 2.625 7.28333 4.025 7.75611 5.33167C7.89667 5.74 7.79444 6.195 7.43667 6.52167L6 9Z" fill="#194EDC"/></svg></i>
-                    <span>(111) 111-1111</span>
-                  </li>
-                  <li>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                        <path d="M18 0.5H2C0.9 0.5 0.0100021 1.5125 0.0100021 2.75L0 16.25C0 17.4875 0.9 18.5 2 18.5H18C19.1 18.5 20 17.4875 20 16.25V2.75C20 1.5125 19.1 0.5 18 0.5ZM18 5L10 10.625L2 5V2.75L10 8.375L18 2.75V5Z" fill="#194EDC"/></svg></i>
-                    <span>loadrans@mail.com</span>
-                  </li>
-                </ul>
+                <p>
+                  <b>Mon-Fri:</b> 8:00 AM – 6:00 PM<br>
+                  <b>Sat-Sun:</b> Closed<br>
+                </p>
               </div>
             </div>
-
-            <button class="button button--primary button--lg js-show-contacts" title="show all contacts">
-              Show All
-            </button>
+            <ul class="licensed__items">
+              <li class="licensed__item">USDOT: 3729978</li>
+              <li class="licensed__item">MC: 1348724</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -2791,6 +2626,6 @@
 
     </div>
 
-    <script src="js/app.min.js?_v=20230731225300"></script>
+    <script src="js/app.min.js?_v=20230831013538"></script>
   </body>
 </html>
